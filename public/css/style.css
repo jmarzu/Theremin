@@ -1,4 +1,35 @@
 html, body {
-  background: darkmagenta;
+  background: white;
   height: 100%;
+}
+
+div {
+  margin-left: 175px;
+  margin-right: 0px;
+  width: 1500px;
+  height: 600px;
+}
+
+div div {
+  margin-right: 0px;
+  margin-left: 5px;
+  display: inline-flex;
+  float: left;
+  width: 75px;
+  height: 300px;
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 30px;
+  font-style: bold;
+  text-align: center;
+}
+
+.black {
+  background: black;
 }

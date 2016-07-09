@@ -6,7 +6,7 @@ $(document).ready(function() {
   var gainNode = context.createGain();
 
   function calculateFrequency(mouseXPosition) {
-    var minFrequency = 20;
+    var minFrequency = 50;
     var maxFrequency = 2000;
 
     return ((mouseXPosition / window.innerWidth) * maxFrequency) + minFrequency;
