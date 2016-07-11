@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   function calculateFrequency(mouseXPosition) {
     var minFrequency = 50;
-    var maxFrequency = 2000;
+    var maxFrequency = 1500;
 
     return ((mouseXPosition / window.innerWidth) * maxFrequency) + minFrequency;
   };
@@ -40,8 +40,18 @@ $(document).ready(function() {
     if (oscillator) {
       oscillator.frequency.setTargetAtTime(calculateFrequency(e.clientX), context.currentTime, 0.01);
     };
-
-
     gainNode.gain.setTargetAtTime(calculateGain(e.clientY), context.currentTime, 0.01);
   });
+
+  $('#hide').click(function(e) {
+    e.preventDefault();
+    $('.piano').hide();
+
+  });
+
+  $('#show').click(function(e) {
+    e.preventDefault();
+    $('.piano').show();
+  });
+
 });
